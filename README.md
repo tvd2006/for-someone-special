@@ -1,129 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>For You ❤️</title>
-
-<style>
-*{
-  box-sizing:border-box;
-}
-body{
-  margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:linear-gradient(135deg,#ffd6e8,#fff0f6);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  overflow:hidden;
-}
-
-/* CARD */
-.card{
-  background:white;
-  padding:30px;
-  border-radius:25px;
-  max-width:360px;
-  text-align:center;
-  animation:pop 1.2s ease;
-  box-shadow:0 20px 40px rgba(0,0,0,.15);
-}
-@keyframes pop{
-  from{transform:scale(.7);opacity:0}
-  to{transform:scale(1);opacity:1}
-}
-
-h1{
-  color:#ff4d88;
-  margin-bottom:10px;
-}
-p{
-  color:#444;
-  font-size:16px;
-  line-height:1.6;
-}
-
-/* CAT */
-.cat{
-  font-size:80px;
-  animation:jump 1.5s infinite alternate, blink 3s infinite;
-}
-@keyframes jump{
-  from{transform:translateY(0)}
-  to{transform:translateY(-20px)}
-}
-@keyframes blink{
-  0%,90%,100%{transform:scale(1)}
-  95%{transform:scale(1.08)}
-}
-
-/* FLOATING HEARTS */
-.heart{
-  position:fixed;
-  color:#ff4d88;
-  font-size:18px;
-  animation:float linear infinite;
-  pointer-events:none;
-}
-@keyframes float{
-  from{transform:translateY(100vh)}
-  to{transform:translateY(-10vh)}
-}
-
-/* TAP NOTE */
-.tap{
-  font-size:12px;
-  color:#999;
-  margin-top:10px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>For You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #fdecef, #ffffff);
+      color: #333;
+      padding: 30px;
+      text-align: center;
+    }
+    .box {
+      max-width: 720px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 22px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    h1 {
+      font-size: 34px;
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: normal;
+      color: #777;
+      margin-bottom: 25px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 18px 0;
+    }
+    .heart {
+      font-size: 42px;
+      margin-bottom: 10px;
+      animation: beat 1.3s infinite;
+    }
+    @keyframes beat {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+    }
+    .end {
+      margin-top: 35px;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="card">
-  <div class="cat">🐱</div>
+  <div class="box">
+    <div class="heart">🤍</div>
 
-  <h1>Hey Aqsa 💗</h1>
+    <h1>Just One Honest Page</h1>
+    <h2>Read it slowly, whenever you feel ready</h2>
 
-  <p>
-    Pyari pyari si chiz  
-    pyari pyari si Aqsa ke liye 💕  
-    <br><br>
-    Ye page bas ek chhoti si koshish hai  
-    tumhe batane ke liye ki  
-    tum bahut special ho ✨
-  </p>
+    <p>
+      Shayad main har baar apni baaton ko sahi tareeke se rakh nahi paaya,
+      aur us process mein tumhe hurt ho gaya.
+      Ye page sirf isliye hai kyunki dil mein jo hai,
+      use chupana aur mushkil lagne laga.
+    </p>
 
-  <p>– Faiz 🤍</p>
-  <div class="tap">(Tap anywhere for music 🎶)</div>
-</div>
+    <p>
+      Main maanta hoon meri galtiyan rahi hain.
+      Kabhi lafz zyada ho gaye,
+      kabhi jazbaat kam samajh paaya.
+      Par ye sach hai ke tumhari jagah hamesha khaas rahi hai.
+    </p>
 
-<!-- BACKGROUND MUSIC (Mobile Safe) -->
-<audio id="bgm" autoplay loop muted>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-</audio>
+    <p>
+      Agar waqt thoda peeche ja sakta,
+      toh main cheezein alag tarah se karta —
+      zyada samajhne ke saath,
+      zyada sabr ke saath.
+    </p>
 
-<script>
-/* Floating hearts */
-for(let i=0;i<25;i++){
-  let h=document.createElement("div");
-  h.className="heart";
-  h.innerHTML="❤️";
-  h.style.left=Math.random()*100+"vw";
-  h.style.fontSize=12+Math.random()*18+"px";
-  h.style.animationDuration=4+Math.random()*4+"s";
-  document.body.appendChild(h);
-}
+    <p>
+      Is page ka koi pressure nahi,
+      koi expectation nahi.
+      Bas itna chahta hoon ke tum ye jaan lo:
+      <strong>tumhari respect aur value mere liye real hai.</strong>
+    </p>
 
-/* Enable music on tap */
-document.body.addEventListener("click",()=>{
-  const music=document.getElementById("bgm");
-  music.muted=false;
-  music.play();
-});
-</script>
+    <p>
+      Jo bhi ho,
+      jaisa bhi ho,
+      tumhari khushi hamesha important rahegi.
+    </p>
+
+    <div class="end">
+      — from someone who never meant to hurt you
+    </div>
+  </div>
 
 </body>
 </html>
